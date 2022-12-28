@@ -53,4 +53,6 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 fruit_choice = streamlit.text_input('What fruit would you like information about?','jackfruit')
-streamlit.write('Thanks for addinf jackfruit ')
+streamlit.write('Thanks for adding jackfruit ')
+
+my_cur.execute("insert into FRUIT_LOAD_LIST values('from streamlit')")
